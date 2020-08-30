@@ -13,4 +13,11 @@ using namespace std;
 
 int main()
 {
+    int n, m, t, T, x, cost, nbuses; //t (°per region), T (max ° per bus), cost (cost per bus)
+    cin >> n >> m;
+    while (--n)
+    {
+        cin >> t >> T >> x >> cost;
+        if (m / nbuses)
+    }
 }

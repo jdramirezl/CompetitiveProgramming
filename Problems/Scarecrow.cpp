@@ -13,4 +13,22 @@ using namespace std;
 
 int main()
 {
+    int T, n, cases;
+    string s;
+    cin >> T;
+    cases = T;
+    while (T--)
+    {
+        int total = 0;
+        cin >> n >> s;
+        for (int i = 0; i < n; ++i)
+        {
+            if (s.at(i) == '.')
+            {
+                total++;
+                i += 2;
+            }
+        }
+        cout << "Case " << (cases - T) << ": " << total << "\n";
+    }
 }
