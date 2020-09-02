@@ -13,7 +13,7 @@ using namespace std;
 
 void problem()
 {
-    long long n, m, t, T, x, cost, nbuses, mini, maxi, temp; //t (°per region), T (max ° per bus), cost (cost per bus)
+    int n, m, t, T, x, cost, nbuses, mini, maxi, temp; //t (°per region), T (max ° per bus), cost (cost per bus)
     long long total = 0;
     cin >> n >> m;
     while (n--)
@@ -22,14 +22,14 @@ void problem()
 
         if (T >= (t + m))
         {
-            total += cost;
+            total = cost;
         }
         else
         {
 
             mini = cost + (m * x);
 
-            if (T - t <= 0)
+            if (T - t == 0)
             {
                 temp = mini;
             }
@@ -46,8 +46,9 @@ void problem()
 
                 temp = min(maxi, mini);
             }
-            total += temp;
         }
+
+        total += temp;
     }
     cout << total;
 }
