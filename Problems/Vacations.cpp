@@ -11,43 +11,29 @@ typedef long double ld;
 
 using namespace std;
 
-int main()
-{
+int main(){
     int n, total = 0; // 0 nada, 1 contest, 2 gym, 3 ambos
     cin >> n;
     int days[n];
 
     cin >> days[0];
-    if (days[0] == 0)
-    {
-        total++;
-    }
 
-    for (int i = 1; i < n; ++i)
-    {
+    if (days[0] == 0) total++;
+
+    for (int i = 1; i < n; ++i){
         cin >> days[i];
 
-        if (days[i] == 3)
-        {
-            if (days[i - 1] == 3)
-            {
-                days[i] = 0;
-            }
-            else if (days[i - 1] == 1)
-            {
-                days[i] = 2;
-            }
-            else if (days[i - 1] == 2)
-            {
-                days[i] = 1;
-            }
+        if (days[i] == 3){
+            if (days[i - 1] == 3) days[i] = 0;
+            else if (days[i - 1] == 1) days[i] = 2;
+            else if (days[i - 1] == 2) days[i] = 1;
         }
-        else if (days[i] == days[i - 1] || days[i] == 0)
-        {
+        else if (days[i] == days[i - 1] || days[i] == 0){
             days[i] = 0;
             total++;
         }
     }
+    
 
-    cout << total;
+    cout << "total";
 }
