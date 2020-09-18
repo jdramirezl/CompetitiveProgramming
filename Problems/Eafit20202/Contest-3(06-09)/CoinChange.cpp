@@ -14,42 +14,33 @@ typedef long double ld;
 using namespace std;
 
 int dp(int n){
-    int pos = 0;
     int coins[] = {1, 5, 10, 25, 50};
-    int dp[5][n];
+    int dp[n];
 
-    fill(*dp, *dp + 5*n, 0);
     for(int i = 0; i<n; ++i){
-        dp[0][i] = 1;
+        dp[i]  = 1;
     }
 
     for(int i = 1; i<5; ++i){
         if(coins[i] <= n){
-            pos++;
-            dp[i][coins[i]-1] = 1 + dp[i-1][coins[i]-1];
-
-            for(int y = 0; y<coins[i]-1; ++y){
-                dp[i][y] += dp[i-1][y];
-            }
+            dp[coins[i]-1] += 1;
 
             for(int j = coins[i]; j<n; ++j){
-                dp[i][j] += (dp[i-1][j]+dp[i][j-coins[i]]);
+                dp[j] += dp[j-coins[i]];
             }
         }
     }
 
-    return dp[pos][n-1];
+    return dp[n-1];
 
 }
 
 
-int main()
-{
+int main(){
     int n;
     string num;
     while (getline(cin, num) && !num.empty()){
         n = stoi(num);
         cout << dp(n) << "\n";
     }
-    
 }
