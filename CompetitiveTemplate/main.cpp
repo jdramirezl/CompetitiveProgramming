@@ -5,12 +5,18 @@
 #define forn(i, n) for (int i = 0; i < (int)n; ++i)
 #define all(v) v.begin(), v.end()
 #define formap(map) for (const auto &[key, value] : map)
-#define ms(ar, val) memset(ar, val, sizeof ar)
+#define ms(ar, val) memset(ar, val, size)
 typedef long long ll;
 typedef long double ld;
 
+#define INF 1000000
+
 using namespace std;
+
+int dp(int , vector<int>);
 
 int main()
 {
+    
 }
+

@@ -11,37 +11,30 @@ typedef long double ld;
 
 using namespace std;
 
-int main()
-{
+int main(){
     int n, k, total = 0, lu, impor;
     cin >> n >> k;
     vector<int> importants;
 
-    for (int i = 0; i < n; ++i)
-    {
+    for (int i = 0; i < n; ++i){
         cin >> lu;
         cin >> impor;
 
-        if (impor == 0)
-        {
+        if (impor == 0){
             total += lu;
         }
-        else
-        {
+        else{
             importants.push_back(lu);
         }
     }
 
     sort(all(importants), greater<int>());
 
-    for (int i = 0; i < importants.size(); ++i)
-    {
-        if (i < k)
-        {
+    for (int i = 0; i < importants.size(); ++i){
+        if (i < k){
             total += importants[i];
         }
-        else
-        {
+        else{
             total -= importants[i];
         }
     }
