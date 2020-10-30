@@ -1,3 +1,6 @@
+//https://leetcode.com/problems/rotate-image/
+//Time complexity: O(end*(limit-1))
+
 #include <iostream>
 #include <bits/stdc++.h>
 #define D(x) cout << #x << " = " << x << endl;
@@ -21,10 +24,6 @@ public:
         int limit = matrix.size(), ini = 0, layers, t1 = matrix[0][0], t2 = matrix[limit-1][limit-1], a, b, minus = limit-2; //MINUS SIZE-1  LIMIT SIZE
         int rounds = limit - 1, end=0, var = 0, aa = rounds, bb = var;
 
-
-        cout << "first" << endl;
-        print(matrix);
-
         if(limit%2==0) layers = limit/2;
         else layers = (limit-1)/2;
 
@@ -34,13 +33,7 @@ public:
             var++;
         }
 
-        D(end)
-        D(layers)
-
         for(int i = 0; i<end; ++i){
-            cout << (i+1) << endl;
-            D(ini)
-            D(limit)
             //Tops
             for(int j = ini; j<limit-1; ++j){
                 //Top
@@ -64,28 +57,17 @@ public:
                 t2 = b;
             }
 
-            D(minus)
-            D(aa)
-            D(bb)
             if(i == minus){
                 ini++;
                 limit--;
                 aa--;
                 bb++;
-                D((aa-bb))
                 minus += ((aa-bb));
             }
 
-
             t1 = matrix[ini][ini];
             t2 = matrix[limit-1][limit-1];
-
-            print(matrix);
-
         }
-
-        cout << "second" << endl;
-        print(matrix);
     }
 };
 

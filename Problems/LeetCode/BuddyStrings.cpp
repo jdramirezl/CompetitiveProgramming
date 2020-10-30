@@ -1,5 +1,5 @@
 //https://leetcode.com/problems/buddy-strings/
-// T
+// Time complexity: O(n) -> N = Length of the smallest string, O(1) = Insert a value in an unordered set
 
 #include <iostream>
 #include <bits/stdc++.h>

@@ -1,3 +1,6 @@
+// https://leetcode.com/problems/path-with-minimum-effort/
+// Time complexity: O((v+e)*logn) v+e: nodes and edges, logn: insert in treeset
+
 #include <iostream>
 #include <bits/stdc++.h>
 #define D(x) cout << #x << " = " << x << endl;
@@ -6,6 +9,8 @@ using namespace std;
 
 class Solution {
 public:
+
+    //Ignore, debug method
     static void print(const vector<vector<int>>& xd){
         for(auto &a : xd){
             for(auto &b: a){
