@@ -13,10 +13,23 @@ typedef long double ld;
 
 using namespace std;
 
-int dp(int , vector<int>);
+#include <iostream>
+using namespace std;
 
-int main()
-{
-    
+string convertToTitle(int n) {
+        string result;
+        while (n) {
+            result.push_back('A' + (n - 1) % 26), n = (n - 1) / 26;
+        }
+        reverse(result.begin(), result.end());
+        return result;
+    }
+
+int main() {
+	//for(int i = 0; i<100; ++i)convertToTitle(i);
+
+	convertToTitle(52);
+	convertToTitle(703);
+
+	return 0;
 }
-
