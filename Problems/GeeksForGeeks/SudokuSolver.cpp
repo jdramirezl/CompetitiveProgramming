@@ -1,5 +1,5 @@
 // https://practice.geeksforgeeks.org/problems/solve-the-sudoku/0
-// Time complexity
+// Time complexity: Backtracking
 
 #include <iostream>
 #include <bits/stdc++.h>

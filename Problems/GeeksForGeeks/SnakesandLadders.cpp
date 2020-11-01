@@ -1,5 +1,5 @@
 // https://practice.geeksforgeeks.org/problems/snake-and-ladder-problem/0
-// Time complexity
+// Time complexity: BFS
 
 #include <bits/stdc++.h>
 #define forn(x, n) for (int i = x; i < (int)n; ++i)
@@ -22,7 +22,7 @@ void bfs(vector<vector<int>> &v, vector<int> &s){
                 if(i == 1 && cur != 0) s[next] = s[cur];
                 else s[next] = s[cur] + 1;
             }
-          else if ((s[next] > (s[cur] + 1)) || ((i == 1 && cur != 0) && (s[next] > s[cur]))){
+            else if ((s[next] > (s[cur] + 1)) || ((i == 1 && cur != 0) && (s[next] > s[cur]))){
                 if(next != 29) q.push(next);
                 if(i == 1 && cur != 0) s[next] = min(s[next], s[cur]);
                 else s[next] = min(s[next], s[cur] + 1);

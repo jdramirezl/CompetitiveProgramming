@@ -1,5 +1,5 @@
 //https://practice.geeksforgeeks.org/problems/height-of-binary-tree/1
-// Time complexity
+// Time complexity: O(n) n -> nodes
 
 #include <iostream>
 #include <bits/stdc++.h>

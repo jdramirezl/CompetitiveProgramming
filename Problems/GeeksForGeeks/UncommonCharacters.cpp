@@ -1,5 +1,5 @@
 //https://practice.geeksforgeeks.org/problems/uncommon-characters4932/1
-// Time complexity
+// Time complexity: O((n+m)logn)
 
 #include <iostream>
 #include <bits/stdc++.h>
