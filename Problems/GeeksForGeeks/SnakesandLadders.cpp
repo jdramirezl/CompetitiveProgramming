@@ -1,4 +1,5 @@
-//
+// https://practice.geeksforgeeks.org/problems/snake-and-ladder-problem/0
+// Time complexity
 
 #include <bits/stdc++.h>
 #define forn(x, n) for (int i = x; i < (int)n; ++i)
