@@ -1,5 +1,9 @@
 //https://practice.geeksforgeeks.org/problems/determine-if-two-trees-are-identical/1
+<<<<<<< HEAD
 // Time complexity 
+=======
+// Time complexity: O(n) n -> Nodes
+>>>>>>> 63ea76935ce094a57801ee067e9717a10a020c28
 
 #include <iostream>
 #include <bits/stdc++.h>
