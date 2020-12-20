@@ -18,7 +18,6 @@ class Solution:
         
         if mismotam: return 0
         
-        zeros = False
         if len(v1) > mini:
             for i in range(mini, len(v1)):
                 if v1[i] != 0: return 1
