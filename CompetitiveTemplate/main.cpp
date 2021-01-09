@@ -11,8 +11,6 @@ typedef long double ld;
 
 #define INF 1000000
 
-using namespace std;
-
 #include <iostream>
 using namespace std;
 
